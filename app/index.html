@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="versionsApp">
+<head>
+  <meta charset="utf-8">
+  <title>OVO service versions</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="VersionsController">
+  <a href="https://github.com/asummers-ovo"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a>
+
+    <div class="versions-table">
+        <div class="row">
+            <div class="name title">Dev</div>
+        </div>
+        <div class="row">
+            <div class="name title">Service</div>
+            <div class="version title">Version</div>
+        </div>
+        <div class="row" ng-repeat="service in devVersions">
+            <div class="name">{{service.serviceName}}</div>
+            <div class="version">{{service.serviceVersion}}</div>
+        </div>
+    </div>
+
+    <div class="versions-table">
+        <div class="row">
+            <div class="name title">UAT</div>
+        </div>
+        <div class="row">
+            <div class="name title">Service</div>
+            <div class="version title">Instance 1 Version</div>
+            <div class="version title">Instance 2 Version</div>
+        </div>
+        <div class="row" ng-repeat="service in uatVersions">
+            <div class="name">{{service.serviceName}}</div>
+            <div class="version">{{service.serviceVersion1}}</div>
+            <div class="version">{{service.serviceVersion2}}</div>
+        </div>
+    </div>
+
+    <div class="versions-table">
+        <div class="row">
+            <div class="name title">Prod Green</div>
+        </div>
+        <div class="row">
+            <div class="name title">Service</div>
+            <div class="version title">Instance 1 Version</div>
+            <div class="version title">Instance 2 Version</div>
+        </div>
+        <div class="row" ng-repeat="service in pgVersions">
+            <div class="name">{{service.serviceName}}</div>
+            <div class="version">{{service.serviceVersion1}}</div>
+            <div class="version">{{service.serviceVersion2}}</div>
+        </div>
+    </div>
+
+    <div class="versions-table">
+        <div class="row">
+            <div class="name title">Prod Blue</div>
+        </div>
+        <div class="row">
+            <div class="name title">Service</div>
+            <div class="version title">Instance 1 Version</div>
+            <div class="version title">Instance 2 Version</div>
+        </div>
+        <div class="row" ng-repeat="service in pbVersions">
+            <div class="name">{{service.serviceName}}</div>
+            <div class="version">{{service.serviceVersion1}}</div>
+            <div class="version">{{service.serviceVersion2}}</div>
+        </div>
+    </div>
+</body>
+</html>
